@@ -44,4 +44,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "coveralls", :reauire => false
+gem "coveralls", :require => false
