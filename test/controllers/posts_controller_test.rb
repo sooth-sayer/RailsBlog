@@ -1,8 +1,17 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
+  def setup
+    @post = posts(:one)
+  end
+
+  def teardown
+    @post = nil
+  end
+
   test "shoud get index" do
     get :index
+
     assert_response :success
     assert_not_nil assigns(:posts)
   end
@@ -16,6 +25,7 @@ class PostsControllerTest < ActionController::TestCase
 
   test "new_should_render_correct_layout" do
     get :new
+
     assert_template layout: "layouts/application", partial: "_form"
   end
 
@@ -26,5 +36,18 @@ class PostsControllerTest < ActionController::TestCase
 
     assert_redirected_to post_path(assigns(:post))
     assert_equal "Post was successfully created.", flash[:notice]
+  end
+
+  test "should show post" do
+    get :show, id: @post.id
+    assert_response :success
+  end
+
+  test "should destroy post" do
+    assert_difference('Post.count', -1) do
+      delete :destroy, id: @post.id
+    end
+
+    assert_redirected_to posts_path
   end
 end
