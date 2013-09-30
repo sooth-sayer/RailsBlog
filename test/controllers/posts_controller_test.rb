@@ -7,14 +7,6 @@ class PostsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:posts)
   end
 
-  test "should create post" do
-    assert_difference('Post.count') do
-      post :create, post: { title: "Some Text For The Title" }
-    end
-
-    assert_redirected_to post_path(assigns(:post))
-  end
-
   test "index should render correct template and layout" do
     get :index
 
@@ -25,5 +17,14 @@ class PostsControllerTest < ActionController::TestCase
   test "new_should_render_correct_layout" do
     get :new
     assert_template layout: "layouts/application", partial: "_form"
+  end
+
+  test "should create post" do
+    assert_difference("Post.count") do
+      post :create, post: { title: "Hello!", body: "This is my first post." }
+    end
+
+    assert_redirected_to post_path(assigns(:post))
+    assert_equal "Post was successfully created.", flash[:notice]
   end
 end
