@@ -3,7 +3,7 @@ require 'test_helper'
 class PostFlowsTest < ActionDispatch::IntegrationTest
   fixtures :posts, :comments
 
-  test "get posts and comments" do
+  test "#get posts and comments" do
     https!(false)
     get "/posts"
     assert_response :success

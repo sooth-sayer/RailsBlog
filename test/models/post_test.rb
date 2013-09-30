@@ -1,12 +1,8 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
+  test "#save without title" do
+    post = Post.new
+    assert !post.save, "Post without the title could not be saved"
   end
-  
-  test "should not save post without title" do
-    post = Post.new    
-    assert !post.save, "Post without the title"
-  end  
 end
