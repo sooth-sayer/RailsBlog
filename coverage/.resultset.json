@@ -1,0 +1,154 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/vagrant/blog/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
+      "/vagrant/blog/app/models/post.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/vagrant/blog/test/controllers/posts_controller_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/vagrant/blog/app/controllers/posts_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/vagrant/blog/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/vagrant/blog/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/blog/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/blog/app/helpers/posts_helper.rb": [
+        1,
+        null
+      ],
+      "/vagrant/blog/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1380536882
+  },
+  "Unknown Test Framework": {
+    "coverage": {
+      "/vagrant/blog/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
+      "/vagrant/blog/app/models/post.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/vagrant/blog/test/models/post_test.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1380530130
+  }
+}

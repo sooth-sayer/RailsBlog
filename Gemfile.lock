@@ -109,6 +109,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    sqlite3 (1.3.8)
     term-ansicolor (1.2.2)
       tins (~> 0.8)
     therubyracer (0.12.0)
@@ -142,6 +143,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 4.0.0)
   sdoc
+  sqlite3
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
