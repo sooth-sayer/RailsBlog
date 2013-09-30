@@ -1,5 +1,5 @@
-== README {<img src="https://coveralls.io/repos/sooth-sayer/RailsBlog/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/sooth-sayer/RailsBlog]
-	  {<img src="https://travis-ci.org/sooth-sayer/RailsBlog.png?branch=master" alt="Build Status" />}[https://travis-ci.org/sooth-sayer/RailsBlog]
+== README {<img src="https://coveralls.io/repos/sooth-sayer/RailsBlog/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/sooth-sayer/RailsBlog]	  {<img src="https://travis-ci.org/sooth-sayer/RailsBlog.png?branch=master" alt="Build Status" />}[https://travis-ci.org/sooth-sayer/RailsBlog]
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
