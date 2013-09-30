@@ -1,0 +1,15 @@
+%h1 All posts
+%table
+  %tr
+    %th Title
+    %th Text
+
+  - @posts.each do |post|
+    %tr
+      %td= post.title
+      %td= post.text
+      %td= link_to "Show", post_path(post)
+      %td= link_to "Update", edit_post_path(post)
+      %td= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you sure?" }
+
+= link_to "New one", new_post_path
