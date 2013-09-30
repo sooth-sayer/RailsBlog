@@ -42,6 +42,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    flash[:notice] = "Show post with id: #{@post.id}"
   end
 
   private

@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  commenter: MyString
-  body: MyText
-  post_id: 
+  commenter: "CommenterForPost#1"
+  body: "Just text"
+  post_id: posts(:one)
 
 two:
-  commenter: MyString
-  body: MyText
-  post_id: 
+  commenter: "CommenterForPost#2"
+  body: "Just another text"
+  post_id: posts(:two)
