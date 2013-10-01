@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap
  */
 .field_with_errors {
   color: #ff0044;  

@@ -1,2 +1,11 @@
-%h1 Welcome to Simple Rails blog
-= yield
+<!DOCTYPE html>
+%html
+  %head
+    %title Welcome to Simple Rails blog
+    = stylesheet_link_tag "application"
+
+  %body
+    %h1 Welcome to Simple Rails blog
+    = yield
+
+    = javascript_include_tag "application"

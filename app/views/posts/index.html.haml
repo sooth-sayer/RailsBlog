@@ -1,5 +1,5 @@
-%h1 All posts
-%table
+%h1.text-success All posts
+%table.table
   %tr
     %th Title
     %th Text
@@ -8,8 +8,19 @@
     %tr
       %td= post.title
       %td= post.text
-      %td= link_to "Show", post_path(post)
-      %td= link_to "Update", edit_post_path(post)
-      %td= link_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you sure?" }
+      %td
+        = link_to post_path(post), class: "btn btn-success" do
+          Show
+          %span.glyphicon.glyphicon-film
 
-= link_to "New one", new_post_path
+        = link_to edit_post_path(post), class: "btn btn-warning" do
+          Update
+          %span.glyphicon.glyphicon-edit
+
+        = link_to post_path(post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" do
+          Delete
+          %span.glyphicon.glyphicon-remove
+
+= link_to new_post_path, class: "btn btn-default" do
+  New one
+  %span.glyphicon.glyphicon-flash
