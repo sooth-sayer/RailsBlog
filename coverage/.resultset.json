@@ -265,6 +265,20 @@
         null,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        7,
+        7,
+        7,
+        null,
+        null,
+        1,
+        1,
+        7,
+        7,
+        null,
         null
       ],
       "/vagrant/blog/app/helpers/application_helper.rb": [
@@ -290,7 +304,7 @@
         null
       ]
     },
-    "timestamp": 1380558645
+    "timestamp": 1380640539
   },
   "Integration Tests": {
     "coverage": {
