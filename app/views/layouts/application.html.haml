@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 %html
   %head
-    %title Welcome to Simple Rails blog
+    %title= t(:welcome)
     = stylesheet_link_tag "application"
 
   %body
-    %h1 Welcome to Simple Rails blog
+    %h1= t(:welcome)
     = yield
 
     = javascript_include_tag "application"

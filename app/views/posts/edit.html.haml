@@ -1,7 +1,7 @@
-%h1 Editing
+%h1= t(:editing)
 
 = render "form"
 
 = link_to posts_path, class: "btn btn-default" do
-  Back
+  = t(:back_btn)
   %span.glyphicon.glyphicon-arrow-left

@@ -1,8 +1,8 @@
-%h1.text-success All posts
+%h1.text-success=t(:all_posts)
 %table.table
   %tr
-    %th Title
-    %th Text
+    %th= t :title, scope: [:activerecord, :attributes, :post]
+    %th= t :text, scope: [:activerecord, :attributes, :post]
 
   - @posts.each do |post|
     %tr
@@ -10,17 +10,17 @@
       %td= post.text
       %td
         = link_to post_path(post), class: "btn btn-success" do
-          Show
+          = t(:show_btn)
           %span.glyphicon.glyphicon-film
 
         = link_to edit_post_path(post), class: "btn btn-warning" do
-          Update
+          = t(:update_btn)
           %span.glyphicon.glyphicon-edit
 
-        = link_to post_path(post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" do
-          Delete
+        = link_to post_path(post), method: :delete, data: { confirm: t(:confirmation) }, class: "btn btn-danger" do
+          = t(:delete_btn)
           %span.glyphicon.glyphicon-remove
 
 = link_to new_post_path, class: "btn btn-default" do
-  New one
+  = t(:create_btn)
   %span.glyphicon.glyphicon-flash

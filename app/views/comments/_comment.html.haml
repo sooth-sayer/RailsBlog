@@ -1,14 +1,14 @@
 %p
-  %strong Commenter:
+  %strong= "#{t :commenter, scope: [:activerecord, :attributes, :comment]}:"
   = comment.commenter
 
-  %strong Comment:
+  %strong= "#{t :body, scope: [:activerecord, :attributes, :comment]}:"
   = comment.body
 
 %p
   = link_to [comment.post, comment],
     method: :delete,
-    data: { confirm: 'Are you sure?' },
+    data: { confirm: t(:confirmation) },
     class: "btn btn-danger btn-xs" do
-    Destroy Comment
+    = t(:delete_btn)
     %span.glyphicon.glyphicon-remove

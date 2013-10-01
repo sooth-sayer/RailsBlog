@@ -1,7 +1,7 @@
-%h1 New Post !
+%h1=t(:new_post)
 
 = render "form"
 
 = link_to posts_path, class: "btn btn-default" do
-  Back
+  = t(:back_btn)
   %span.glyphicon.glyphicon-arrow-left

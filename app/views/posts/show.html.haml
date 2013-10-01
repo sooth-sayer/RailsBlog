@@ -1,21 +1,21 @@
 %p
-  %strong Title:
+  %strong= "#{t :title, scope: [:activerecord, :attributes, :post]}:"
   = @post.title
 
 %p
-  %strong Text:
+  %strong= "#{t :text, scope: [:activerecord, :attributes, :post]}:"
   = @post.text
 
-%h2 Comments
+%h2= "#{t(:comments)}:"
 = render @post.comments
 
-%h2 Add a comment:
+%h2= "#{t(:add_comment)}:"
 = render "comments/form"
 
 = link_to posts_path, class: "btn btn-default" do
-  Back
+  = t(:back_btn)
   %span.glyphicon.glyphicon-arrow-left
 |
 = link_to edit_post_path(@post), class: "btn btn-default" do
   %span.glyphicon.glyphicon-edit
-  Update
+  = t(:update_btn)

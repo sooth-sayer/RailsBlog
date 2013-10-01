@@ -19,16 +19,16 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  blog: "Blog"
-  welcome: "Welcome to simple rails blog"
-  editing: "Editing"
+ru:
+  hello: "Привет, мир!"
+  blog: "Блог"
+  welcome: "Вас приветствует мини-бложек"
+  editing: "Редактирование"
 
-  all_posts: "All posts"
-  new_post: "Create a new post"
+  all_posts: "Все посты"
+  new_post: "Создать новый пост"
 
-  comments: "Comments"
-  add_comment: "Add a comment"
+  comments: "Комментарии"
+  add_comment: "Добавить комментарий"
 
-  confirmation: "Are you sure?"
+  confirmation: "Вы уверены?"

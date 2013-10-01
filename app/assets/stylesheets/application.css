@@ -16,3 +16,7 @@
   color: #ff0044;  
   display: inline-block;
 }
+
+form .col-lg-10 {
+  width: 100%;
+}
