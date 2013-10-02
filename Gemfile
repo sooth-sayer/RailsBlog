@@ -47,3 +47,6 @@ gem "haml-rails"
 gem "twitter-bootstrap-rails"
 
 gem "simple_form"
+
+gem "state_machine"
+gem "ruby-graphviz", :require => "graphviz"

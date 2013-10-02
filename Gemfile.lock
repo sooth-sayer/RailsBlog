@@ -95,6 +95,7 @@ GEM
     ref (1.0.5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    ruby-graphviz (1.0.9)
     sass (3.2.11)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -120,6 +121,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.8)
+    state_machine (1.2.0)
     term-ansicolor (1.2.2)
       tins (~> 0.8)
     therubyracer (0.12.0)
@@ -157,10 +159,12 @@ DEPENDENCIES
   pg
   rails (= 4.0.0)
   rails_12factor
+  ruby-graphviz
   sass-rails (~> 4.0.0)
   sdoc
   simple_form
   sqlite3
+  state_machine
   therubyracer
   turbolinks
   twitter-bootstrap-rails
