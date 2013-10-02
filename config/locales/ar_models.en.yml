@@ -29,6 +29,7 @@ ru:
       post:
         title: "Title"
         text: "Text"
+        picture: "Picture"
       comment:
         commenter: "Commenter"
         body: "Comment body"

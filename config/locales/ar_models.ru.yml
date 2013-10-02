@@ -29,6 +29,7 @@ ru:
       post:
         title: "Заголовок"
         text: "Текст"
+        picture: "Картинка"
       comment:
         commenter: "Автор"
         body: "Комментарий"
