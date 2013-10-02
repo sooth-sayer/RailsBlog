@@ -50,3 +50,6 @@ gem "simple_form"
 
 gem "state_machine"
 gem "ruby-graphviz", :require => "graphviz"
+
+# Upploaders
+gem "carrierwave"

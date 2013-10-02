@@ -16,4 +16,5 @@
 /tmp
 
 # Coverage
-coverage
+coverage/
+public/
