@@ -6,6 +6,10 @@
   %strong= "#{t :text, scope: [:activerecord, :attributes, :post]}:"
   = @post.text
 
+%p
+  %strong= "#{t :picture, scope: [:activerecord, :attributes, :post]}:"
+  =image_tag @post.picture
+
 %h2= "#{t(:comments)}:"
 = render @post.comments
 
