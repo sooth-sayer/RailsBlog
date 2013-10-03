@@ -44,6 +44,7 @@ gem "rails_12factor", group: :production
 # For God Views)
 gem "haml-rails"
 
+gem "font-awesome-rails"
 gem "twitter-bootstrap-rails"
 
 gem "simple_form"

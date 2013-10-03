@@ -1,4 +1,7 @@
 en:
   breadcrumbs:
     posts:
-      index: "posts"
+      posts: "posts"
+      new: "New post"
+      update: "Update"
+
