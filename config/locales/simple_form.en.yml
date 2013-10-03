@@ -24,3 +24,20 @@ en:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
 
+    labels:
+      comment:
+        commenter: "Commenter"
+        body: "Comment"
+
+    placeholders:
+      post:
+        title: "Title"
+        text: "Text"
+      comment:
+        commenter: "Commenter"
+        body: "Text"
+
+  helpers:
+    submit:
+      create: "Create %{model}"
+      update: "Update %{model}"
