@@ -6,6 +6,7 @@
 
   %body
     %h1= t(:welcome)
+    = render_breadcrumbs
     = yield
 
     = javascript_include_tag "application"
