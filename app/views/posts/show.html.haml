@@ -8,7 +8,7 @@
 
 %p
   %strong= "#{t :picture, scope: [:activerecord, :attributes, :post]}:"
-  =image_tag @post.picture
+  = image_tag @post.picture, class: "post-image"
 
 %h2= "#{t(:comments)}:"
 = render @post.comments
