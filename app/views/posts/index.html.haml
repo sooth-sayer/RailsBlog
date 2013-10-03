@@ -11,16 +11,16 @@
       %td
         = link_to post_path(post), class: "btn btn-success" do
           = t(:show_btn)
-          %span.glyphicon.glyphicon-film
+          %span.icon-film
 
         = link_to edit_post_path(post), class: "btn btn-warning" do
           = t(:update_btn)
-          %span.glyphicon.glyphicon-edit
+          %span.icon-edit
 
         = link_to post_path(post), method: :delete, data: { confirm: t(:confirmation) }, class: "btn btn-danger" do
           = t(:delete_btn)
-          %span.glyphicon.glyphicon-remove
+          %span.icon-remove
 
 = link_to new_post_path, class: "btn btn-default" do
   = t(:create_btn)
-  %span.glyphicon.glyphicon-flash
+  %span.icon-leaf

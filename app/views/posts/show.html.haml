@@ -17,9 +17,9 @@
 = render "comments/form"
 
 = link_to posts_path, class: "btn btn-default" do
+  %span.icon-arrow-left
   = t(:back_btn)
-  %span.glyphicon.glyphicon-arrow-left
 |
 = link_to edit_post_path(@post), class: "btn btn-default" do
-  %span.glyphicon.glyphicon-edit
+  %span.icon-edit
   = t(:update_btn)
