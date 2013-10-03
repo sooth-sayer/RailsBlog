@@ -2,21 +2,21 @@ class PostsController < ApplicationController
   http_basic_authenticate_with name: "user", password: "user", except: [:index, :show] unless Rails.env.test?
 
   add_breadcrumb "/", :root_path
-  add_breadcrumb "posts", :posts_path
+  add_breadcrumb :posts, :posts_path
 
   def index
     @posts = Post.all
   end
 
   def new
-    add_breadcrumb "new"
+    add_breadcrumb :new
     @post = Post.new
   end
 
   def edit
     @post = Post.find(params[:id])
     add_breadcrumb @post.title, @post
-    add_breadcrumb "update"
+    add_breadcrumb :update
   end
 
   def create
