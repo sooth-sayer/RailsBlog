@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
-  include FactoryGirl::Syntax::Methods
-
   def setup
     @post = create(:post)
   end
