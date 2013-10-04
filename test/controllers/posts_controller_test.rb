@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
+  include FactoryGirl::Syntax::Methods
+
   def setup
-    @post = posts(:one)
+    @post = create(:post)
   end
 
   def teardown

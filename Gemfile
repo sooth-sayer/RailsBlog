@@ -54,3 +54,5 @@ gem "ruby-graphviz", :require => "graphviz"
 
 # Upploaders
 gem "carrierwave"
+
+gem "factory_girl_rails"
