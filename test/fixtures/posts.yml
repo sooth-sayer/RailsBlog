@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  title: "Post#1Title"
-  text: "Post#1Text"
-
-two:
-  title: "Post#2Title"
-  text: "Post#2Text"
