@@ -33,10 +33,9 @@ class PostsControllerTest < ActionController::TestCase
     new_post = build(:post)
     post :create, post: new_post.attributes
 
-    created_post = Post.find_by(title: new_post.title)
-    assert_not_nil created_post
+    assert_not_nil Post.find_by(title: new_post.title)
 
-    assert_redirected_to post_path(created_post)
+    assert_response :redirect
     assert_equal "Post was successfully created.", flash[:notice]
   end
 
@@ -50,7 +49,7 @@ class PostsControllerTest < ActionController::TestCase
 
     refute Post.exists?(@post.id)
 
-    assert_redirected_to posts_path
+    assert_response :redirect
   end
 
   test "routes" do
