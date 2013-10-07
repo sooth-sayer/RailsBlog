@@ -7,8 +7,11 @@ Blog::Application.routes.draw do
   root 'welcome#index'
 
   resources :posts do
-    resources :comments
+    scope module: :post do
+      resources :comments
+    end
   end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

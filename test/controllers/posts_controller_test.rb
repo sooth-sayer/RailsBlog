@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
-  include FactoryGirl::Syntax::Methods
-
   def setup
     @post = create(:post)
   end
@@ -32,11 +30,13 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "#create" do
-    assert_difference("Post.count") do
-      post :create, post: { title: "Hello!", body: "This is my first post." }
-    end
+    new_post = build(:post)
+    post :create, post: new_post.attributes
 
-    assert_redirected_to post_path(assigns(:post))
+    created_post = Post.find_by(title: new_post.title)
+    assert_not_nil created_post
+
+    assert_redirected_to post_path(created_post)
     assert_equal "Post was successfully created.", flash[:notice]
   end
 
@@ -46,9 +46,9 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "#destroy" do
-    assert_difference('Post.count', -1) do
-      delete :destroy, id: @post.id
-    end
+    delete :destroy, id: @post.id
+
+    refute Post.exists?(@post.id)
 
     assert_redirected_to posts_path
   end

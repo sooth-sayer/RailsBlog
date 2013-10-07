@@ -1,12 +1,10 @@
 require 'test_helper'
 
 class PostFlowsTest < ActionDispatch::IntegrationTest
-  include FactoryGirl::Syntax::Methods
-
   test "#get posts and comments" do
-    comments_count = 7
-    posts_count = 25
-    posts = create_list(:post_with_comments, posts_count, comments_count: comments_count);
+    comments_count = 1
+    posts_count = 2
+    posts = create_list(:post, posts_count, comments_count: comments_count);
 
     https!(false)
     get "/posts"
