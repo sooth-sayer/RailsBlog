@@ -14,7 +14,7 @@
 = render @post.comments
 
 %h2= "#{t(:add_comment)}:"
-= render "comments/form"
+= render "post/comments/form"
 
 = link_to posts_path, class: "btn btn-default" do
   %span.icon-arrow-left
