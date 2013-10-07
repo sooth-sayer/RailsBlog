@@ -52,6 +52,23 @@ class PostsControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
+  test "#edit" do
+    get :edit, id: @post.id
+
+    assert_response :success
+  end
+
+  test "#update" do
+    new_post = attributes_for(:post)
+    post :update, id: @post.id, post: new_post
+
+    updated_post = Post.find(@post.id)
+
+    assert_equal new_post[:text], updated_post.text
+
+    assert_response :redirect
+  end
+
   test "routes" do
     assert_routing "/posts/1", controller: "posts", action: "show", id: "1"
   end

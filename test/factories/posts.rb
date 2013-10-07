@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :post do
     title
-    text "Some useful text"
+    text
 
     ignore do
       comments_count 1
