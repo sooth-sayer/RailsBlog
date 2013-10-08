@@ -1,0 +1,23 @@
+%title "Reply"
+
+= render @comment.parent if @comment.parent
+
+= simple_form_for(@comment, url: post_comments_path(@comment.post),
+  html: { class: "form-horizontal add-a-comment" },
+  defaults: { input_html: { class: "form-control" }, wrapper_html: { class: "col-lg-10" }}) do |f|
+
+  = f.input :parent_id, as: :hidden
+
+  .form-group
+    = f.input :commenter
+
+  .form-group
+    = f.input :body, as: :text
+
+  .controls
+    = f.button :submit, class: "btn btn-success btn-mini"
+
+
+= link_to posts_path, class: "btn btn-default" do
+  %span.icon-arrow-left
+  = t(:back_btn)

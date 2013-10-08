@@ -11,15 +11,20 @@
   = image_tag @post.picture, class: "post-image"
 
 %h2= "#{t(:comments)}:"
-= render @post.comments
 
-%h2= "#{t(:add_comment)}:"
-= render "post/comments/form"
+%button.btn{ type: "button", data: { toggle: "collapse", target: "#demo" }}
+  %span.icon-comment
+  = "#{t(:add_comment)}"
+.collapse_in.collapse#demo
+  = render partial: "post/comments/form"
 
-= link_to posts_path, class: "btn btn-default" do
-  %span.icon-arrow-left
-  = t(:back_btn)
-|
-= link_to edit_post_path(@post), class: "btn btn-default" do
-  %span.icon-edit
-  = t(:update_btn)
+= nested_comments @post.comments.arrange(order: :created_at)
+
+.footer-buttons
+  = link_to posts_path, class: "btn btn-default" do
+    %span.icon-arrow-left
+    = t(:back_btn)
+  |
+  = link_to edit_post_path(@post), class: "btn btn-default" do
+    %span.icon-edit
+    = t(:update_btn)

@@ -30,5 +30,6 @@ en:
 
   comments: "Comments"
   add_comment: "Add a comment"
+  add_nested_comment: "Comment on Comment!"
 
   confirmation: "Are you sure?"
