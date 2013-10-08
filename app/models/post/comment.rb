@@ -1,4 +1,4 @@
 class Post::Comment < ActiveRecord::Base
-  belongs_to :post
   has_ancestry
+  belongs_to :post
 end
