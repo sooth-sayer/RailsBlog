@@ -1,14 +1,19 @@
-%p
-  %strong= "#{t :commenter, scope: [:activerecord, :attributes, :comment]}:"
-  = comment.commenter
+.comment
+  %p
+    %strong= "#{t :commenter, scope: [:activerecord, :attributes, :comment]}:"
+    = comment.commenter
 
-  %strong= "#{t :body, scope: [:activerecord, :attributes, :comment]}:"
-  = comment.body
+    %strong= "#{t :body, scope: [:activerecord, :attributes, :comment]}:"
+    = comment.body
 
-%p
-  = link_to post_comment_path(@post, comment),
-    method: :delete,
-    data: { confirm: t(:confirmation) },
-    class: "btn btn-danger btn-mini" do
-    = t(:delete_btn)
-    %span.icon-remove
+  %p
+    = link_to post_comment_path(@post, comment),
+      method: :delete,
+      data: { confirm: t(:confirmation) },
+      class: "btn btn-danger btn-mini" do
+      = t(:delete_btn)
+      %span.icon-remove
+
+    =link_to new_post_comment_path(parent_id: comment, post_id: comment.post), class: "btn btn-mini" do
+      %span.icon-comment
+      = "#{t(:add_nested_comment)}"
