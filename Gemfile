@@ -56,3 +56,6 @@ gem "ruby-graphviz", :require => "graphviz"
 gem "carrierwave"
 
 gem "factory_girl_rails"
+
+# Paging
+gem "kaminari"
