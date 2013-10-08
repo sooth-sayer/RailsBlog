@@ -62,8 +62,7 @@ class PostsControllerTest < ActionController::TestCase
     post :update, id: @post.id, post: new_post
     assert_response :redirect
 
-    updated_post = Post.find(@post.id)
-    assert_equal new_post[:text], updated_post.text
+    assert_equal new_post[:text], @post.reload.text
   end
 
   test "routes" do
