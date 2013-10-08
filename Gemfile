@@ -62,3 +62,5 @@ gem "kaminari"
 
 # Nested comments
 gem "ancestry"
+
+gem "awesome_print", group: :test
