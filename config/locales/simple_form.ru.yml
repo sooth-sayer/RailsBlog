@@ -25,7 +25,7 @@ ru:
     #     password: 'No special characters, please.'
 
     labels:
-      comment:
+      post_comment:
         commenter: "Автор"
         body: "Комментарий"
 
