@@ -21,6 +21,8 @@
           = t(:delete_btn)
           %span.icon-remove
 
+= paginate @posts
+
 = link_to new_post_path, class: "btn btn-default" do
   = t(:create_btn)
   %span.icon-leaf
