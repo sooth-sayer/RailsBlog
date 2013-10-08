@@ -59,3 +59,6 @@ gem "factory_girl_rails"
 
 # Paging
 gem "kaminari"
+
+# Nested comments
+gem "ancestry"
