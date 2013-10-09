@@ -23,7 +23,7 @@ ru:
   activerecord:
     models:
       post: "Post"
-      comment: "Comment"
+      post/comment: "Comment"
 
     attributes:
       post:
