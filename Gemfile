@@ -3,12 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :test
-
-# For Heroku
-gem 'pg', group: :production
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -30,16 +24,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 # Code coverage
 gem "coveralls", :require => false
-
-# Heroku production
-gem "rails_12factor", group: :production
 
 # For God Views)
 gem "haml-rails"
@@ -63,6 +49,24 @@ gem "kaminari"
 # Nested comments
 gem "ancestry"
 
-gem "awesome_print", group: :test
-
 gem "configus"
+
+group :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+
+  gem "awesome_print"
+end
+
+group :production do
+  # Heroku production
+  gem "rails_12factor"
+
+  # For Heroku
+  gem 'pg'
+end
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
