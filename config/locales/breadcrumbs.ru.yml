@@ -1,6 +1,7 @@
 ru:
   breadcrumbs:
-    posts:
-      posts: "Посты"
-      new: "Новый пост"
-      update: "Редактирование"
+    web:
+      posts:
+        posts: "Посты"
+        new: "Новый пост"
+        update: "Редактирование"
