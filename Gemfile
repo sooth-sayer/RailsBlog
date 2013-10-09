@@ -64,3 +64,5 @@ gem "kaminari"
 gem "ancestry"
 
 gem "awesome_print", group: :test
+
+gem "configus"
