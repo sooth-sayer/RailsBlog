@@ -16,19 +16,9 @@ class Web::PostsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:posts)
   end
 
-  test "#index template and layout" do
-    get :index
-    assert_response :success
-
-    assert_template :index
-    assert_template layout: "layouts/web/application"
-  end
-
-  test "#new layout" do
+  test "#new" do
     get :new
     assert_response :success
-
-    assert_template layout: "layouts/web/application", partial: "_form"
   end
 
   test "#create" do
@@ -64,9 +54,5 @@ class Web::PostsControllerTest < ActionController::TestCase
 
     @post.reload
     assert_equal new_post[:text], @post.text
-  end
-
-  test "routes" do
-    assert_routing "/posts/1", controller: "web/posts", action: "show", id: "1"
   end
 end
