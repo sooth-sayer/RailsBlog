@@ -21,14 +21,14 @@ class Web::PostsControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_template :index
-    assert_template layout: "layouts/application"
+    assert_template layout: "layouts/web/application"
   end
 
   test "#new layout" do
     get :new
     assert_response :success
 
-    assert_template layout: "layouts/application", partial: "_form"
+    assert_template layout: "layouts/web/application", partial: "_form"
   end
 
   test "#create" do
