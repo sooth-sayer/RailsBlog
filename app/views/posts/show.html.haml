@@ -16,7 +16,7 @@
   %span.icon-comment
   = "#{t(:add_comment)}"
 .collapse_in.collapse#demo
-  = render partial: "post/comments/form"
+  = render "post/comments/form"
 
 = nested_comments @post.comments.arrange(order: :created_at)
 

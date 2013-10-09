@@ -8,7 +8,11 @@ Blog::Application.routes.draw do
 
   resources :posts do
     scope module: :post do
-      resources :comments
+      resources :comments do
+        member do
+          get "new_child" => "comments#new_child"
+        end
+      end
     end
   end
 

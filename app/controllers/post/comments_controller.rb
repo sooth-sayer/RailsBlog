@@ -1,8 +1,9 @@
 class Post::CommentsController < ApplicationController
   http_basic_authenticate_with name: "user", password: "user", only: :destroy unless Rails.env.test?
 
-  def new
-    @comment = Post::Comment.new(parent_id: params[:parent_id], post_id: params[:post_id])
+  def new_child
+    post = Post.find(params[:post_id])
+    @comment = post.comments.build(parent_id: params[:id])
   end
 
   def create
