@@ -1,5 +1,5 @@
 class Web::PostsController < Web::ApplicationController
-  http_basic_authenticate_with name: "user", password: "user", except: [:index, :show] unless Rails.env.test?
+  http_basic_authenticate_with name: configus.user.name, password: configus.user.password, except: [:index, :show] unless Rails.env.test?
 
   add_breadcrumb :posts, :posts_path
 
