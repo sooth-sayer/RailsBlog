@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class Web::PostsController < ApplicationController
   http_basic_authenticate_with name: "user", password: "user", except: [:index, :show] unless Rails.env.test?
 
   add_breadcrumb "/", :root_path

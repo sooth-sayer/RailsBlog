@@ -1,6 +1,6 @@
 %title "Reply"
 
-= render @comment.parent if @comment.parent
+= render(partial: "web/posts/comments/comment", object: @comment.parent) if @comment.parent
 
 = simple_form_for(@comment, url: post_comments_path(@comment.post),
   html: { class: "form-horizontal add-a-comment" },

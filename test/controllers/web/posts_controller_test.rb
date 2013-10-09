@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PostsControllerTest < ActionController::TestCase
+class Web::PostsControllerTest < ActionController::TestCase
   def setup
     @post = create(:post)
   end
@@ -67,6 +67,6 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "routes" do
-    assert_routing "/posts/1", controller: "posts", action: "show", id: "1"
+    assert_routing "/posts/1", controller: "web/posts", action: "show", id: "1"
   end
 end

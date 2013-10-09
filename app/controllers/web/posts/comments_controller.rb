@@ -1,4 +1,4 @@
-class Post::CommentsController < ApplicationController
+class Web::Posts::CommentsController < ApplicationController
   http_basic_authenticate_with name: "user", password: "user", only: :destroy unless Rails.env.test?
 
   def new_child

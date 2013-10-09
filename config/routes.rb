@@ -4,13 +4,15 @@ Blog::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'web/welcome#index'
 
-  resources :posts do
-    scope module: :post do
-      resources :comments do
-        member do
-          get "new_child" => "comments#new_child"
+  scope module: :web do
+    resources :posts do
+      scope module: :posts do
+        resources :comments do
+          member do
+            get "new_child" => "comments#new_child"
+          end
         end
       end
     end
