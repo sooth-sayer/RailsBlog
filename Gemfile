@@ -13,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', :platforms => :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -25,7 +25,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Code coverage
-gem "coveralls", :require => false
+gem "coveralls", require: false
 
 # For God Views)
 gem "haml-rails"
@@ -36,7 +36,7 @@ gem "twitter-bootstrap-rails"
 gem "simple_form"
 
 gem "state_machine"
-gem "ruby-graphviz", :require => "graphviz"
+gem "ruby-graphviz", require: "graphviz"
 
 # Upploaders
 gem "carrierwave"

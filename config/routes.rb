@@ -6,9 +6,9 @@ Blog::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'web/welcome#index'
 
-  scope module: :web do
+  scope :module => :web do
     resources :posts do
-      scope module: :posts do
+      scope :module => :posts do
         resources :comments do
           member do
             get "new_child" => "comments#new_child"
