@@ -53,6 +53,6 @@ class Web::PostsController < Web::ApplicationController
 
   private
   def get_post_params
-    params.require(:post).permit(:title, :text, :picture)
+    params.require(:post).permit(:title, :text, :picture, :state_event)
   end
 end

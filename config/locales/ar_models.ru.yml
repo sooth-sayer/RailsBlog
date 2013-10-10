@@ -30,6 +30,7 @@ ru:
         title: "Заголовок"
         text: "Текст"
         picture: "Картинка"
+        state_event: "Состояние"
       comment:
         commenter: "Автор"
         body: "Комментарий"

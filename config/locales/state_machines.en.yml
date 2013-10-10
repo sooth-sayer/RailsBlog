@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    state_machines:
+      post:
+        state:
+          states:
+            created: "Created"
+            disabled: "Disabled"
+          events:
+            close: "Close"
