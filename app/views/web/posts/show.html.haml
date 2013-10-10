@@ -1,13 +1,13 @@
 %p
-  %strong= "#{t :title, scope: [:activerecord, :attributes, :post]}:"
+  %strong= "#{t :title, :scope => [:activerecord, :attributes, :post]}:"
   = @post.title
 
 %p
-  %strong= "#{t :text, scope: [:activerecord, :attributes, :post]}:"
+  %strong= "#{t :text, :scope => [:activerecord, :attributes, :post]}:"
   = @post.text
 
 %p
-  %strong= "#{t :picture, scope: [:activerecord, :attributes, :post]}:"
+  %strong= "#{t :picture, :scope => [:activerecord, :attributes, :post]}:"
   = image_tag @post.picture, class: "post-image"
 
 %h2= "#{t(:comments)}:"
@@ -18,7 +18,7 @@
 .collapse_in.collapse#demo
   = render "web/posts/comments/form"
 
-= nested_comments @post.comments.arrange(order: :created_at)
+= nested_comments @post.comments.arrange(:order => :created_at)
 
 .footer-buttons
   = link_to posts_path, class: "btn btn-default" do

@@ -30,6 +30,7 @@ ru:
         title: "Title"
         text: "Text"
         picture: "Picture"
+        state_event: "State"
       comment:
         commenter: "Commenter"
         body: "Comment body"

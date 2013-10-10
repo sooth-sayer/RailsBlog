@@ -1,5 +1,6 @@
-= simple_form_for([@post], html: { class: "form-horizontal add-a-post" },
-  defaults: { input_html: { class: "form-control" }, wrapper_html: { class: "col-lg-10" }}) do |f|
+= simple_form_for @post,
+  :html => { class: "form-horizontal add-a-post" },
+  :defaults => { input_html: { class: "form-control" }, wrapper_html: { class: "col-lg-10" }} do |f|
   = f.error_notification
 
   .form-group
@@ -10,6 +11,9 @@
 
   .form-group
     = f.input :picture
+
+  .form-group
+    = f.input :state_event, as: :state_event
 
   .controls
     = f.button :submit, class: "btn btn-success btn-mini"
