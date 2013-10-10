@@ -1,8 +1,8 @@
 %h1.text-success=t(:all_posts)
 %table.table
   %tr
-    %th= t :title, scope: [:activerecord, :attributes, :post]
-    %th= t :text, scope: [:activerecord, :attributes, :post]
+    %th= t :title, :scope => [:activerecord, :attributes, :post]
+    %th= t :text, :scope => [:activerecord, :attributes, :post]
 
   - @posts.each do |post|
     %tr
@@ -17,7 +17,10 @@
           = t(:update_btn)
           %span.icon-edit
 
-        = link_to post_path(post), method: :delete, data: { confirm: t(:confirmation) }, class: "btn btn-danger" do
+        = link_to post_path(post),
+          :method => :delete,
+          :data => { confirm: t(:confirmation) },
+          :class => "btn btn-danger" do
           = t(:delete_btn)
           %span.icon-remove
 

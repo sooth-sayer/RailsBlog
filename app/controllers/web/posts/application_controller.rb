@@ -2,7 +2,8 @@ class Web::Posts::ApplicationController < Web::ApplicationController
   helper_method :current_post
 
   before_filter do
-    add_breadcrumb t(:posts, scope: [:breadcrumbs, :web, :posts]), :posts_path
+    add_breadcrumb t(:posts,
+      scope: [:breadcrumbs, :web, :posts]), :posts_path
     add_breadcrumb current_post.title, current_post
   end
 

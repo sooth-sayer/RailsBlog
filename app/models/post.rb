@@ -5,12 +5,12 @@ class Post < ActiveRecord::Base
 
   mount_uploader :picture, PictureUploader
 
-  state_machine initial: :created do
+  state_machine :initial => :created do
     state :created
     state :disabled
 
     event :close do
-      transition created: :disabled
+      transition :created => :disabled
     end
   end
 end

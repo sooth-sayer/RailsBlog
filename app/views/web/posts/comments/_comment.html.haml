@@ -8,12 +8,12 @@
 
   %p
     = link_to post_comment_path(@post, comment),
-      method: :delete,
-      data: { confirm: t(:confirmation) },
-      class: "btn btn-danger btn-mini" do
+      :method => :delete,
+      :data => { confirm: t(:confirmation) },
+      :class => "btn btn-danger btn-mini" do
       = t(:delete_btn)
       %span.icon-remove
 
-    =link_to new_child_post_comment_path(@post, comment), class: "btn btn-mini" do
+    =link_to new_child_post_comment_path(@post, comment), :class => "btn btn-mini" do
       %span.icon-comment
       = "#{t(:add_nested_comment)}"

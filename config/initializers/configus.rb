@@ -6,9 +6,9 @@ Configus.build Rails.env do
     end
   end
 
-  env :development, parent: :production do
+  env :development, :parent => :production do
   end
 
-  env :test, parent: :production do
+  env :test, :parent => :production do
   end
 end

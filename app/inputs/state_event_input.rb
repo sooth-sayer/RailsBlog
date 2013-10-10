@@ -1,4 +1,4 @@
-class StateEventInput < SimpleForm::Inputs::CollectionSelectInput
+  class StateEventInput < SimpleForm::Inputs::CollectionSelectInput
   def input
     transition_list = object.send("#{state_machine}_transitions")
     current_value = object.send("human_#{state_machine}_name")
@@ -9,8 +9,7 @@ class StateEventInput < SimpleForm::Inputs::CollectionSelectInput
 
     @builder.collection_select(
       attribute_name, transition_list, value_method, label_method,
-      input_options, input_html_options
-    )
+      input_options, input_html_options)
   end
 
   def state_machine
