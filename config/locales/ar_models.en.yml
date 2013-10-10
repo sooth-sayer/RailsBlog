@@ -31,6 +31,6 @@ ru:
         text: "Text"
         picture: "Picture"
         state_event: "State"
-      comment:
+      post/comment:
         commenter: "Commenter"
         body: "Comment body"
