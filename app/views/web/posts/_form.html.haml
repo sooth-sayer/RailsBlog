@@ -15,5 +15,15 @@
   .form-group
     = f.input :state_event, as: :state_event
 
+  .form-group
+    %h3= t(:comments)
+    #comments
+      = f.simple_fields_for :comments do |comment|
+        = render "web/posts/comments/comment_fields", :f => comment
+      .links
+        = link_to_add_association t(:add_btn), f, :comments,
+          :partial => "web/posts/comments/comment_fields",
+          :class => "btn btn-primary btn-mini"
+
   .controls
     = f.button :submit, class: "btn btn-success btn-mini"

@@ -31,6 +31,6 @@ ru:
         text: "Текст"
         picture: "Картинка"
         state_event: "Состояние"
-      comment:
+      post/comment:
         commenter: "Автор"
         body: "Комментарий"

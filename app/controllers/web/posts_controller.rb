@@ -19,7 +19,7 @@ class Web::PostsController < Web::ApplicationController
   end
 
   def create
-    @post = Post.new(get_post_params)
+    @post = Post.new(get_post_all_params)
     if @post.save
       flash[:notice] = "Post was successfully created."
       redirect_to @post
@@ -31,7 +31,7 @@ class Web::PostsController < Web::ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update(get_post_params)
+    if @post.update(get_post_all_params)
       redirect_to @post
     else
       render "edit"
@@ -52,7 +52,15 @@ class Web::PostsController < Web::ApplicationController
   end
 
   private
-  def get_post_params
-    params.require(:post).permit(:title, :text, :picture, :state_event)
+  def get_post_all_params
+    params.require(:post).permit(post_params, :comments_attributes => comments_params)
+  end
+
+  def post_params
+    [:title, :text, :picture, :state_event]
+  end
+
+  def comments_params
+    [:id, :commenter, :body]
   end
 end
