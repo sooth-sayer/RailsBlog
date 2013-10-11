@@ -1,0 +1,24 @@
+ru:
+  layouts:
+    web:
+      application:
+        welcome: "Добро пожаловать!"
+
+  web:
+    welcome:
+      index:
+        blog: "Блог"
+
+    posts:
+      index:
+        all_posts: "Записи блога"
+      new:
+        new_post: "Создать запись блога"
+      show:
+        add_comment: "Добавить комментарий"
+      edit:
+        edit_post: "Редактирование записи блога"
+
+      comments:
+        comment:
+          add_nested_comment: "Ответить"

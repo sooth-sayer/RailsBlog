@@ -1,0 +1,24 @@
+en:
+  layouts:
+    web:
+      application:
+        welcome: "Welcome!"
+
+  web:
+    welcome:
+      index:
+        blog: "Blog"
+
+    posts:
+      index:
+        all_posts: "Blog records"
+      new:
+        new_post: "New post"
+      show:
+        add_comment: "Add comment"
+      edit:
+        edit_post: "Edit post"
+
+      comments:
+        comment:
+          add_nested_comment: "Reply"
