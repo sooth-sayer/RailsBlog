@@ -1,8 +1,8 @@
-%h1.text-success=t(:all_posts)
+%h1.text-success=t(".all_posts")
 %table.table
   %tr
-    %th= t :title, :scope => [:activerecord, :attributes, :post]
-    %th= t :text, :scope => [:activerecord, :attributes, :post]
+    %th= Post.human_attribute_name :title
+    %th= Post.human_attribute_name :text
 
   - @posts.each do |post|
     %tr
