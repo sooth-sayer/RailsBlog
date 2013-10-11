@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 %html
   %head
-    %title= t(".welcome")
+    %title= t(:welcome)
     = stylesheet_link_tag "application"
     = csrf_meta_tags
 
   %body
-    %h1= t(".welcome")
+    %h1= t(:welcome)
     = render_breadcrumbs
     = yield
 

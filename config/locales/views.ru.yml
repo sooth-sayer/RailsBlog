@@ -1,9 +1,4 @@
 ru:
-  layouts:
-    web:
-      application:
-        welcome: "Добро пожаловать!"
-
   web:
     welcome:
       index:
