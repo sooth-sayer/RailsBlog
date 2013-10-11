@@ -1,0 +1,5 @@
+en:
+  errors:
+    messages:
+      too_short: "At least %{count} symbols"
+      blank: "Required"

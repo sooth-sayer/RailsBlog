@@ -22,15 +22,15 @@
 ru:
   activerecord:
     models:
-      post: "Post"
-      post/comment: "Comment"
+      post: "Пост"
+      post/comment: { one: "Комментарий", other: "Комментарии" }
 
     attributes:
       post:
-        title: "Title"
-        text: "Text"
-        picture: "Picture"
-        state_event: "State"
-      comment:
-        commenter: "Commenter"
-        body: "Comment body"
+        title: "Заголовок"
+        text: "Текст"
+        picture: "Картинка"
+        state_event: "Состояние"
+      post/comment:
+        commenter: "Автор"
+        body: "Комментарий"

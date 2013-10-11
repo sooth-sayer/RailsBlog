@@ -1,7 +1,13 @@
+dictionary:
+  posts: &posts "Посты"
+
 ru:
   breadcrumbs:
     web:
       posts:
-        posts: "Посты"
-        new: "Новый пост"
+        posts: *posts
+        new: "Новый"
         update: "Редактирование"
+
+        comments:
+          posts: *posts

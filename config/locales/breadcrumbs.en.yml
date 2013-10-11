@@ -1,8 +1,14 @@
+dictionary:
+  posts: &posts "Posts"
+
 en:
   breadcrumbs:
     web:
       posts:
-        posts: "posts"
+        posts: *posts
         new: "New post"
         update: "Update"
+
+        comments:
+          posts: *posts
 

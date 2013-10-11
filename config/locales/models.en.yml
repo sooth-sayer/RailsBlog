@@ -19,17 +19,18 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  blog: "Blog"
-  welcome: "Welcome to simple rails blog"
-  editing: "Editing"
+ru:
+  activerecord:
+    models:
+      post: "Post"
+      post/comment: { one: "Comment", other: "Comments" }
 
-  all_posts: "All posts"
-  new_post: "Create a new post"
-
-  comments: "Comments"
-  add_comment: "Add a comment"
-  add_nested_comment: "Comment on Comment!"
-
-  confirmation: "Are you sure?"
+    attributes:
+      post:
+        title: "Title"
+        text: "Text"
+        picture: "Picture"
+        state_event: "State"
+      post/comment:
+        commenter: "Commenter"
+        body: "Comment body"

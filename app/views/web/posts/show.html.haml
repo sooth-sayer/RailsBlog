@@ -1,20 +1,20 @@
 %p
-  %strong= "#{t :title, :scope => [:activerecord, :attributes, :post]}:"
+  %strong= "#{Post.human_attribute_name :title}:"
   = @post.title
 
 %p
-  %strong= "#{t :text, :scope => [:activerecord, :attributes, :post]}:"
+  %strong= "#{Post.human_attribute_name :text}:"
   = @post.text
 
 %p
-  %strong= "#{t :picture, :scope => [:activerecord, :attributes, :post]}:"
+  %strong= "#{Post.human_attribute_name :picture}:"
   = image_tag @post.picture, class: "post-image"
 
-%h2= "#{t(:comments)}:"
+%h2= "#{Post::Comment.model_name.human count: 0}:"
 
 %button.btn{ type: "button", data: { toggle: "collapse", target: "#demo" }}
   %span.icon-comment
-  = "#{t(:add_comment)}"
+  = t(".add_comment")
 .collapse_in.collapse#demo
   = render "web/posts/comments/form"
 

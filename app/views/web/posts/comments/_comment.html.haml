@@ -1,9 +1,9 @@
 .comment
   %p
-    %strong= "#{t :commenter, scope: [:activerecord, :attributes, :comment]}:"
+    %strong= "#{Post::Comment.human_attribute_name :commenter}:"
     = comment.commenter
 
-    %strong= "#{t :body, scope: [:activerecord, :attributes, :comment]}:"
+    %strong= "#{Post::Comment.human_attribute_name :body}:"
     = comment.body
 
   %p
@@ -16,4 +16,4 @@
 
     =link_to new_child_post_comment_path(@post, comment), :class => "btn btn-mini" do
       %span.icon-comment
-      = "#{t(:add_nested_comment)}"
+      = t(".add_nested_comment")
