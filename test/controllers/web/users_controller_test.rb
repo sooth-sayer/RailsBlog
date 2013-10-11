@@ -3,47 +3,48 @@ require 'test_helper'
 class Web::UsersControllerTest < ActionController::TestCase
   setup do
     @user = create(:user)
+    @new_user = build(:user)
   end
 
-  test "should get index" do
+  test "#index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:users)
   end
 
-  test "should get new" do
+  test "#new" do
     get :new
     assert_response :success
   end
 
-  test "should create user" do
-    assert_difference('User.count') do
-      post :create, user: { email: @user.email, name: @user.name }
-    end
+  test "#create" do
+    post :create, user: @new_user.attributes
+    assert_response :redirect
 
-    assert_redirected_to user_path(assigns(:user))
+    assert_equal @new_user.email, User.find_by_name(@new_user.name).email
   end
 
-  test "should show user" do
+  test "#show" do
     get :show, id: @user
     assert_response :success
   end
 
-  test "should get edit" do
+  test "#edit" do
     get :edit, id: @user
     assert_response :success
   end
 
-  test "should update user" do
-    patch :update, id: @user, user: { email: @user.email, name: @user.name }
-    assert_redirected_to user_path(assigns(:user))
+  test "#update" do
+    patch :update, id: @user, user: @new_user.attributes
+    assert_response :redirect
+
+    @user.reload
+    assert_equal @new_user.email, @user.email
   end
 
-  test "should destroy user" do
-    assert_difference('User.count', -1) do
-      delete :destroy, id: @user
-    end
+  test "#destroy" do
+    delete :destroy, id: @user
+    assert_response :redirect
 
-    assert_redirected_to users_path
+    refute User.exists?(@user)
   end
 end
