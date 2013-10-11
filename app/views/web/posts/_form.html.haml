@@ -7,16 +7,16 @@
     = f.input :title
 
   .form-group
-    = f.input :text, as: :text
+    = f.input :text, :as => :text
 
   .form-group
     = f.input :picture
 
   .form-group
-    = f.input :state_event, as: :state_event
+    = f.input :state_event, :as => :state_event
 
   .form-group
-    %h3= t(:comments)
+    %h3= "#{Post::Comment.model_name.human count: 0}:"
     #comments
       = f.simple_fields_for :comments do |comment|
         = render "web/posts/comments/comment_fields", :f => comment
