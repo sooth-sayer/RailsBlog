@@ -57,7 +57,7 @@ class Web::PostsController < Web::ApplicationController
   end
 
   def post_params
-    [:title, :text, :picture, :state_event]
+    [:title, :text, :picture, :state_event, :user_id]
   end
 
   def comments_params
