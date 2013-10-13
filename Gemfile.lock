@@ -30,6 +30,7 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     awesome_print (1.2.0)
+    bcrypt-ruby (3.1.2)
     builder (3.1.4)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
@@ -174,6 +175,7 @@ PLATFORMS
 DEPENDENCIES
   ancestry
   awesome_print
+  bcrypt-ruby
   carrierwave
   cocoon
   coffee-rails (~> 4.0.0)

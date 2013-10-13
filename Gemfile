@@ -56,6 +56,8 @@ gem "cocoon"
 
 gem "validates_email_format_of"
 
+gem "bcrypt-ruby"
+
 group :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
