@@ -1,7 +1,7 @@
 .comment
   %p
     %strong= "#{Post::Comment.human_attribute_name :commenter}:"
-    = comment.commenter
+    = comment.commenter.name
 
     %strong= "#{Post::Comment.human_attribute_name :body}:"
     = comment.body

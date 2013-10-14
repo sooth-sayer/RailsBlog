@@ -1,13 +1,19 @@
 dictionary:
   posts: &posts "Posts"
+  users: &users "Users"
 
 en:
   breadcrumbs:
     web:
+      users:
+        users: *users
+        new: "New user"
+        update: "Editing user"
+
       posts:
         posts: *posts
         new: "New post"
-        update: "Update"
+        update: "Update post"
 
         comments:
           posts: *posts

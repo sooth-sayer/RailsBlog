@@ -54,6 +54,10 @@ gem "configus"
 # Nested forms
 gem "cocoon"
 
+gem "validates_email_format_of"
+
+gem "bcrypt-ruby", "3.0.1"
+
 group :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

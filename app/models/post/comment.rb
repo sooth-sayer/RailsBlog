@@ -1,4 +1,6 @@
 class Post::Comment < ActiveRecord::Base
-  has_ancestry
   belongs_to :post
+  belongs_to :commenter, class_name: "User"
+
+  has_ancestry
 end

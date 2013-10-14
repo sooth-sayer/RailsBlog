@@ -2,6 +2,7 @@ FactoryGirl.define do
   factory :post do
     title
     text
+    user
 
     ignore do
       comments_count 1

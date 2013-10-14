@@ -1,13 +1,19 @@
 dictionary:
   posts: &posts "Посты"
+  users: &users "Пользователи"
 
 ru:
   breadcrumbs:
     web:
+      users:
+        users: *users
+        new: "Создание нового пользователя"
+        update: "Редактирование параметров пользователя"
+
       posts:
         posts: *posts
-        new: "Новый"
-        update: "Редактирование"
+        new: "Создание записи блога"
+        update: "Редактирование записи блога"
 
         comments:
           posts: *posts

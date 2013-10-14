@@ -1,0 +1,31 @@
+%h1.text-success=t(".all_users")
+%table.table
+  %tr
+    %th= User.human_attribute_name :name
+    %th= User.human_attribute_name :email
+
+  - @users.each do |user|
+    %tr
+      %td= user.name
+      %td= user.email
+      %td
+        = link_to user_path(user), class: "btn btn-success" do
+          = t(:show_btn)
+          %span.icon-film
+
+        = link_to edit_user_path(user), class: "btn btn-warning" do
+          = t(:update_btn)
+          %span.icon-edit
+
+        = link_to user_path(user),
+          :method => :delete,
+          :data => { confirm: t(:confirmation) },
+          :class => "btn btn-danger" do
+          = t(:delete_btn)
+          %span.icon-remove
+
+= paginate @users
+
+= link_to new_user_path, class: "btn btn-default" do
+  = t(:create_btn)
+  %span.icon-leaf
