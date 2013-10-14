@@ -20,11 +20,10 @@ class Web::PostsController < Web::ApplicationController
 
   def create
     @post = Post.new(get_post_all_params)
+
     if @post.save
-      flash[:notice] = "Post was successfully created."
-      redirect_to @post
+      redirect_to @post, notice: t("notice.successfully")
     else
-      puts @post.errors.messages
       render "new"
     end
   end
@@ -33,7 +32,7 @@ class Web::PostsController < Web::ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update(get_post_all_params)
-      redirect_to @post
+      redirect_to @post, notice: t("notice.successfully")
     else
       render "edit"
     end
@@ -49,7 +48,6 @@ class Web::PostsController < Web::ApplicationController
   def show
     @post = Post.find(params[:id])
     add_breadcrumb @post.title, @post
-    flash[:notice] = "Show post with id: #{@post.id}"
   end
 
   private

@@ -27,7 +27,6 @@ class Web::PostsControllerTest < ActionController::TestCase
     assert_response :redirect
 
     assert_not_nil Post.find_by(title: new_post.title)
-    assert_equal "Post was successfully created.", flash[:notice]
   end
 
   test "#show" do

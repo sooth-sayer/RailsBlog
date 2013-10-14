@@ -5,9 +5,13 @@ ru:
         welcome: "Добро пожаловать!"
 
   web:
-    welcome:
+    users:
       index:
-        blog: "Блог"
+        all_users: "Пользователи системы"
+      new:
+        new_user: "Создание нового пользователя"
+      edit:
+        edit_user: "Редактирование данных пользователя"
 
     posts:
       index:

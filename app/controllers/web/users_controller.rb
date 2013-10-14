@@ -1,25 +1,31 @@
 class Web::UsersController < Web::ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb :users, :users_path
+
   def index
-    @users = User.all
+    @users = User.page params[:page]
   end
 
   def show
+    add_breadcrumb @user.name, @user
   end
 
   def new
+    add_breadcrumb :new
     @user = User.new
   end
 
   def edit
+    add_breadcrumb @user.name, @user
+    add_breadcrumb :update
   end
 
   def create
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user, notice: "User was successfully created."
+      redirect_to @user, notice: t("notice.successfully")
     else
       render action: "new"
     end
@@ -27,7 +33,7 @@ class Web::UsersController < Web::ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to @user, notice: t("notice.successfully")
     else
       render action: 'edit'
     end

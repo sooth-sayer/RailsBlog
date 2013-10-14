@@ -5,9 +5,13 @@ en:
         welcome: "Welcome!"
 
   web:
-    welcome:
+    users:
       index:
-        blog: "Blog"
+        all_users: "Users"
+      new:
+        new_user: "New user"
+      edit:
+        edit_user: "Edit user"
 
     posts:
       index:

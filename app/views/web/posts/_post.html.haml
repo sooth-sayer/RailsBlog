@@ -1,0 +1,15 @@
+.post
+  %p
+    %strong= "#{Post.human_attribute_name :title}:"
+    = post.title
+    %br
+    %strong= "#{Post.human_attribute_name :text}:"
+    = post.text
+
+  %p
+    = link_to post_path(post),
+      :method => :delete,
+      :data => { confirm: t(:confirmation) },
+      :class => "btn btn-danger btn-mini" do
+      = t(:delete_btn)
+      %span.icon-remove
