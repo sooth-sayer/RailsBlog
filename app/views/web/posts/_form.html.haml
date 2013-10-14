@@ -16,6 +16,9 @@
     = f.input :state_event, :as => :state_event
 
   .form-group
+    = f.association :user
+
+  .form-group
     %h3= "#{Post::Comment.model_name.human count: 0}:"
     #comments
       = f.simple_fields_for :comments do |comment|

@@ -3,3 +3,15 @@ en:
     messages:
       too_short: "At least %{count} symbols"
       blank: "Required"
+      invalid_email_format: "Invalid email address format"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "Sorry, but email address already in use"
+
+  notice:
+    successfully: "Successfully!"

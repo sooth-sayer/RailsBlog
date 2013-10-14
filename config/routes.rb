@@ -16,6 +16,7 @@ Blog::Application.routes.draw do
         end
       end
     end
+    resources :users
   end
 
 

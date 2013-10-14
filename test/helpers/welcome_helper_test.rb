@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class WelcomeHelperTest < ActionView::TestCase
+class Web::WelcomeHelperTest < ActionView::TestCase
 end

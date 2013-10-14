@@ -1,0 +1,7 @@
+%h1= t(".edit_user")
+
+= render "form"
+
+= link_to users_path, class: "btn btn-default" do
+  %span.icon-arrow-left
+  = t(:back_btn)

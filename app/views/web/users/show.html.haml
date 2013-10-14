@@ -1,0 +1,20 @@
+%p
+  %strong= "#{User.human_attribute_name :name}:"
+  = @user.name
+
+%p
+  %strong= "#{User.human_attribute_name :email}:"
+  = @user.email
+
+%h2= "#{Post.model_name.human count: 0}:"
+
+= render @user.posts
+
+.footer-buttons
+  = link_to users_path, class: "btn btn-default" do
+    %span.icon-arrow-left
+    = t(:back_btn)
+  |
+  = link_to edit_user_path(@user), class: "btn btn-default" do
+    %span.icon-edit
+    = t(:update_btn)
