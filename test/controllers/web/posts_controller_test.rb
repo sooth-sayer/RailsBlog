@@ -39,7 +39,7 @@ class Web::PostsControllerTest < ActionController::TestCase
     delete :destroy, id: @post.id
     assert_response :redirect
 
-    refute Post.exists?(@post.id)
+    assert !Post.exists?(@post.id)
   end
 
   test "#edit" do

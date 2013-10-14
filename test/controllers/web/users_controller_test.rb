@@ -45,6 +45,6 @@ class Web::UsersControllerTest < ActionController::TestCase
     delete :destroy, id: @user
     assert_response :redirect
 
-    refute User.exists?(@user)
+    assert !User.exists?(@user)
   end
 end

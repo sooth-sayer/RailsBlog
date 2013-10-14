@@ -4,7 +4,6 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :comments, allow_destroy: true, :reject_if => :all_blank
 
   validates :title, presence: true, length: { minimum: 3 }
-  validates :user, presence: true
 
   mount_uploader :picture, PictureUploader
 

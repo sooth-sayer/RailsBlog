@@ -24,6 +24,7 @@ class Web::PostsController < Web::ApplicationController
       flash[:notice] = "Post was successfully created."
       redirect_to @post
     else
+      puts @post.errors.messages
       render "new"
     end
   end
@@ -53,14 +54,14 @@ class Web::PostsController < Web::ApplicationController
 
   private
   def get_post_all_params
-    params.require(:post).permit(post_params, :comments_attributes => comments_params)
+    params.require(:post).permit(post_params, :comments_attributes => comment_params)
   end
 
   def post_params
     [:title, :text, :picture, :state_event, :user_id]
   end
 
-  def comments_params
-    [:id, :commenter, :body]
+  def comment_params
+    [:id, :body, :post_id, :commenter_id]
   end
 end
