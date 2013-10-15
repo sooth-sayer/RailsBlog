@@ -3,7 +3,11 @@ en:
     messages:
       too_short: "At least %{count} symbols"
       blank: "Required"
-      invalid_email_format: "Invalid email address format"
+
+  activemodel:
+    errors:
+      messages:
+        invalid_email_address: "Invalid email address format"
 
   activerecord:
     errors:

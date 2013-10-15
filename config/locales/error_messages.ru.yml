@@ -3,7 +3,11 @@ ru:
     messages:
       too_short: "Не менее %{count} символов"
       blank: "Поле не должно быть пустым"
-      invalid_email_format: "Формат адреса электронной почты не верен"
+
+  activemodel:
+    errors:
+      messages:
+        invalid_email_address: "Формат адреса электронной почты не верен"
 
   activerecord:
     errors:
