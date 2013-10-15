@@ -14,12 +14,6 @@
       = t(:delete_btn)
       %span.icon-remove
 
-    = link_to new_child_post_comment_path(@post, comment),
-      :class => "btn btn-mini add-nested",
-      :data => { id: comment.id } do
-      %span.icon-comment
-      = t(".add_nested_comment")
-
     %a.btn.btn-mini.btn-add-nested{ href: "#modal", role: "button", data: { toggle: "modal" } }
       %span.icon-comment
       = t(".add_nested_comment")
