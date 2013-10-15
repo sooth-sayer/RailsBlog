@@ -22,8 +22,7 @@
       .navbar-inner
         .container-fluid
           %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-          %a.brand(href="#")
-            = t(:blog)
+          = link_to t(:blog), posts_path, class: "brand"
 
     .container-fluid
       .row-fluid
