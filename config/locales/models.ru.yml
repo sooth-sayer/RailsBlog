@@ -22,9 +22,15 @@
 ru:
   activerecord:
     models:
-      user: { one: "Пользователь", other: "Пользователи" }
-      post: { one: "Пост", other: "Посты" }
-      post/comment: { one: "Комментарий", other: "Комментарии" }
+      user:
+        one: "Пользователь"
+        other: "Пользователи"
+      post:
+        one: "Пост"
+        other: "Посты"
+      post/comment:
+        one: "Комментарий"
+        other: "Комментарии"
 
     attributes:
       user:
