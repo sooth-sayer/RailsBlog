@@ -196,6 +196,7 @@ DEPENDENCIES
   simple_form
   sqlite3
   state_machine
+  term-ansicolor
   therubyracer
   turbolinks
   twitter-bootstrap-rails

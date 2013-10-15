@@ -22,7 +22,8 @@ class Web::PostsController < Web::ApplicationController
     @post = Post.new(get_post_all_params)
 
     if @post.save
-      redirect_to @post, notice: t("notice.successfully")
+      f(:success)
+      redirect_to @post
     else
       render "new"
     end
@@ -32,7 +33,8 @@ class Web::PostsController < Web::ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update(get_post_all_params)
-      redirect_to @post, notice: t("notice.successfully")
+      f(:success)
+      redirect_to @post
     else
       render "edit"
     end
@@ -40,7 +42,9 @@ class Web::PostsController < Web::ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    if @post.destroy
+      f(:success)
+    end
 
     redirect_to posts_path
   end
