@@ -1,0 +1,18 @@
+en:
+  flash:
+    web:
+      posts:
+        create:
+          success: "Post successfully created"
+        update:
+          success: "Post successfully updated"
+        destroy:
+          success: "Post successfully removed"
+
+      users:
+        create:
+          success: "User successfully added"
+        update:
+          success: "User info successfully updated"
+        destroy:
+          success: "User successfully removed"

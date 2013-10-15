@@ -25,7 +25,8 @@ class Web::UsersController < Web::ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user, notice: t("notice.successfully")
+      f(:success)
+      redirect_to @user
     else
       render action: "new"
     end
@@ -33,14 +34,18 @@ class Web::UsersController < Web::ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: t("notice.successfully")
+      f(:success)
+      redirect_to @user
     else
       render action: 'edit'
     end
   end
 
   def destroy
-    @user.destroy
+    if @user.destroy
+      f(:success)
+    end
+
     redirect_to users_url
   end
 

@@ -1,0 +1,18 @@
+ru:
+  flash:
+    web:
+      posts:
+        create:
+          success: "Пост успешно создан"
+        update:
+          success: "Пост успешно изменён"
+        destroy:
+          success: "Пост успешно удалён"
+
+      users:
+        create:
+          success: "Пользователь успешно добавлен"
+        update:
+          success: "Данные пользователя успешно изменёны"
+        destroy:
+          success: "Пользователь успешно удалён"
