@@ -44,6 +44,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    columnize (0.3.6)
     configus (0.0.4)
       rake
     coveralls (0.7.0)
@@ -52,6 +53,12 @@ GEM
       simplecov (>= 0.7)
       term-ansicolor
       thor
+    debugger (1.6.2)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.3)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.2.0)
@@ -181,6 +188,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   configus
   coveralls
+  debugger
   factory_girl_rails
   font-awesome-rails
   haml-rails
