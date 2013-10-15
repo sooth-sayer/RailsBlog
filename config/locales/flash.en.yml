@@ -9,6 +9,12 @@ en:
         destroy:
           success: "Post successfully removed"
 
+        comments:
+          create:
+            success: "Comment successfully created"
+          destroy:
+            success: "Comment successfully removed"
+
       users:
         create:
           success: "User successfully added"
