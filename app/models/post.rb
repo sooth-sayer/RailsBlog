@@ -15,4 +15,6 @@ class Post < ActiveRecord::Base
       transition :created => :disabled
     end
   end
+  
+  include PostRepository
 end
