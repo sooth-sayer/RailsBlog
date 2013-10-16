@@ -3,11 +3,11 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  # On click set correct parent_id on the modal form
+  # On click nested reply set correct parent_id on the modal form
   $(".comment .btn-add-nested").click ->
     $("#modal #post_comment_parent_id").val($(".comment").has(this).attr("data-id"))
 
-  # Move submit() to the modal submit button
+  # Moving submit() call to the modal save button
   form = $("#modal form")
 
   form_submit = form.find("input[type='submit']")
