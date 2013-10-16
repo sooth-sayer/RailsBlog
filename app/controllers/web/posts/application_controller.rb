@@ -1,5 +1,5 @@
 class Web::Posts::ApplicationController < Web::ApplicationController
-  helper_method :current_post
+  helper_method :resource_post
 
   before_filter do
     add_breadcrumb :posts, :posts_path
@@ -8,6 +8,6 @@ class Web::Posts::ApplicationController < Web::ApplicationController
 
   private
   def resource_post
-    @current_post ||= Post.find(params[:post_id])
+    @resource_post ||= Post.find(params[:post_id])
   end
 end
