@@ -17,9 +17,10 @@ Blog::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :posts do
+      # TODO add posts api
+      resources :posts, :only => [] do
         scope :module => :posts do
-          resources :comments
+          resources :comments, :only => :create
         end
       end
     end
