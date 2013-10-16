@@ -7,7 +7,7 @@ class Web::Posts::CommentsControllerTest < ActionController::TestCase
     post :create, post_id: new_comment.post.id, post_comment: new_comment.attributes
     assert_response :redirect
 
-    assert_not_nil Post::Comment.find_by(body: new_comment.body)
+    assert { Post::Comment.find_by(body: new_comment.body) }
   end
 
   test "#destroy" do
@@ -16,6 +16,6 @@ class Web::Posts::CommentsControllerTest < ActionController::TestCase
     delete :destroy, post_id: comment.post.id, id: comment.id
     assert_response :redirect
 
-    assert !Post::Comment.exists?(comment.id)
+    assert { !Post::Comment.exists?(comment.id) }
   end
 end
