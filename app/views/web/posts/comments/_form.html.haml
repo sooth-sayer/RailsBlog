@@ -1,5 +1,8 @@
 = simple_form_for [@post, @post.comments.build],
-  :url => post_comments_path(@post),
+  :url => api_v1_post_comments_path(@post),
+  :method => :post,
+  :remote => true,
+  :format => :json,
   :html => { class: "form-horizontal add-a-comment" },
   :defaults => { :input_html => { class: "form-control" }, :wrapper_html => { class: "col-lg-10" }} do |f|
 
