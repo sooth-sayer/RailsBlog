@@ -62,6 +62,8 @@ gem "term-ansicolor"
 
 gem "debugger"
 
+gem "wrong"
+
 group :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

@@ -13,7 +13,7 @@ class Web::PostsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    assert_not_nil assigns(:posts)
+    assert { assigns(:posts) }
   end
 
   test "#new" do
@@ -26,7 +26,7 @@ class Web::PostsControllerTest < ActionController::TestCase
     post :create, post: new_post.attributes
     assert_response :redirect
 
-    assert_not_nil Post.find_by(title: new_post.title)
+    assert { Post.find_by(title: new_post.title) }
   end
 
   test "#show" do
@@ -38,7 +38,7 @@ class Web::PostsControllerTest < ActionController::TestCase
     delete :destroy, id: @post.id
     assert_response :redirect
 
-    assert !Post.exists?(@post.id)
+    assert { !Post.exists?(@post.id) }
   end
 
   test "#edit" do
@@ -52,6 +52,6 @@ class Web::PostsControllerTest < ActionController::TestCase
     assert_response :redirect
 
     @post.reload
-    assert_equal new_post[:text], @post.text
+    assert { new_post[:text] == @post.text }
   end
 end
