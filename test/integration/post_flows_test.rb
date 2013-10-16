@@ -9,11 +9,11 @@ class PostFlowsTest < ActionDispatch::IntegrationTest
     https!(false)
     get "/posts"
     assert_response :success
-    assert_equal posts_count, assigns(:posts).length
+    assert { posts_count == assigns(:posts).length }
 
     https!(false)
     get "/posts/#{posts.first.id}"
     assert_response :success
-    assert_equal comments_count, assigns(:post).comments.length - 2
+    assert { comments_count == assigns(:post).comments.length - 2 }
   end
 end
