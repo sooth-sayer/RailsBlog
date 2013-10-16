@@ -7,6 +7,7 @@ class Api::V1::Posts::CommentsControllerTest < ActionController::TestCase
     post :create, post_id: new_comment.post.id, post_comment: new_comment.attributes, :format => :json
     assert_response :created
 
-    assert_not_nil Post::Comment.find_by_body(new_comment.body)
+    created_comment = Post::Comment.find_by_body(new_comment.body)
+    assert { created_comment }
   end
 end
