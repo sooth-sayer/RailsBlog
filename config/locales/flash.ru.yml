@@ -9,6 +9,12 @@ ru:
         destroy:
           success: "Пост успешно удалён"
 
+        comments:
+          create:
+            success: "Комметарий успешно создан"
+          destroy:
+            success: "Комметарий успешно удалён"
+
       users:
         create:
           success: "Пользователь успешно добавлен"

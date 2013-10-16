@@ -5,3 +5,5 @@ en:
   update_btn: "Update"
   delete_btn: "Delete"
   add_btn: "Add"
+  close_btn: "Close"
+  save_btn: "Save"

@@ -1,12 +1,6 @@
 require 'test_helper'
 
 class Web::Posts::CommentsControllerTest < ActionController::TestCase
-  test "#new_child" do
-    post = create("post")
-    get :new_child, post_id: post.id, id: post.comments.first.id
-    assert_response :success
-  end
-
   test "#create" do
     new_comment = build("post/comment")
 

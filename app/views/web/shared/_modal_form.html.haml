@@ -1,0 +1,18 @@
+- title ||= ""
+- close_btn_content ||= t(:close_btn, default: "Close")
+- save_btn_content ||= t(:save_btn, default: "Save")
+- body_locals ||= {}
+
+#modal.modal.hide.fade{ tabindex: -1, role: "dialog", aria: { labelledby: "modalLabel", hidden: true } }
+  .modal-header
+    %button.close{ type: "button", data: { dismiss: "modal" }, aria: { hidden: true } }
+      ×
+    %h3#modalLabel
+      = title
+  .modal-body
+    = render body, locals: body_locals
+  .modal-footer
+    %button.btn.btn-close{ data: { dismiss: "modal" }, aria: { hidden: true } }
+      = close_btn_content
+    %button.btn.btn-primary.btn-save
+      = save_btn_content
