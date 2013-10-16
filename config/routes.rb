@@ -9,11 +9,7 @@ Blog::Application.routes.draw do
   scope :module => :web do
     resources :posts do
       scope :module => :posts do
-        resources :comments do
-          member do
-            get "new_child" => "comments#new_child"
-          end
-        end
+        resources :comments
       end
     end
     resources :users
