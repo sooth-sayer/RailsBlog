@@ -12,8 +12,6 @@ class Web::PostsControllerTest < ActionController::TestCase
   test "#index" do
     get :index
     assert_response :success
-
-    assert { assigns(:posts) }
   end
 
   test "#new" do
@@ -26,7 +24,8 @@ class Web::PostsControllerTest < ActionController::TestCase
     post :create, post: new_post.attributes
     assert_response :redirect
 
-    assert { Post.find_by(title: new_post.title) }
+    created_post = Post.find_by_title(new_post.title)
+    assert { created_post }
   end
 
   test "#show" do
@@ -52,6 +51,6 @@ class Web::PostsControllerTest < ActionController::TestCase
     assert_response :redirect
 
     @post.reload
-    assert { new_post[:text] == @post.text }
+    assert { @post.text == new_post[:text] }
   end
 end

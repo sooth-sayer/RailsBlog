@@ -20,7 +20,8 @@ class Web::UsersControllerTest < ActionController::TestCase
     post :create, user: @new_user
     assert_response :redirect
 
-    assert { @new_user[:email] == User.find_by_name(@new_user[:name]).email }
+    created_user = User.find_by_name(@new_user[:name])
+    assert { created_user }
   end
 
   test "#show" do
@@ -38,7 +39,7 @@ class Web::UsersControllerTest < ActionController::TestCase
     assert_response :redirect
 
     @user.reload
-    assert  { @new_user[:email] == @user.email }
+    assert  { @user.email == @new_user[:email] }
   end
 
   test "#destroy" do
