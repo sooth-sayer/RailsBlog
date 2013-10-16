@@ -20,6 +20,8 @@
 
 = nested_comments @post.comments.arrange(:order => :created_at)
 
+= render partial: "web/shared/modal_form", locals: { title: t(".add_comment"), body: "web/posts/comments/form" }
+
 .footer-buttons
   = link_to posts_path, class: "btn btn-default" do
     %span.icon-arrow-left
