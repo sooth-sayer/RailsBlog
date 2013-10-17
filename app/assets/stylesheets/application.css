@@ -19,3 +19,7 @@
 form .col-lg-10 {
   width: 100%;
 }
+
+.time {
+  font-style: italic;
+}

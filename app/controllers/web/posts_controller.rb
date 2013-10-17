@@ -3,6 +3,8 @@ class Web::PostsController < Web::ApplicationController
 
   add_breadcrumb :posts, :posts_path
 
+  decorates_assigned :post
+
   def index
     @posts = Post.created.page params[:page]
   end
