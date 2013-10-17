@@ -4,7 +4,7 @@ ru:
       post:
         state:
           states:
-            created: "Новый"
-            disabled: "Закрыт"
+            unpublished: "Не опубликован"
+            published: "Опубликован"
           events:
-            close: "Закрыть"
+            publish: "Опубликовать"
