@@ -1,10 +1,10 @@
 %p
   %strong= "#{User.human_attribute_name :name}:"
-  = user.name
+  = user.blockquotes_name
 
 %p
   %strong= "#{User.human_attribute_name :email}:"
-  = user.email
+  = user.blockquotes_email
 
 %h2= "#{Post.model_name.human count: 0}:"
 
