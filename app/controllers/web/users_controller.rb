@@ -3,6 +3,8 @@ class Web::UsersController < Web::ApplicationController
 
   add_breadcrumb :users, :users_path
 
+  decorates_assigned :user
+
   def index
     @users = User.page params[:page]
   end
