@@ -7,14 +7,14 @@ class Post < ActiveRecord::Base
 
   mount_uploader :picture, PictureUploader
 
-  state_machine :initial => :created do
-    state :created
-    state :disabled
+  state_machine :initial => :unpublished do
+    state :unpublished
+    state :published
 
-    event :close do
-      transition :created => :disabled
+    event :publish do
+      transition :unpublished => :published
     end
   end
-  
+
   include PostRepository
 end

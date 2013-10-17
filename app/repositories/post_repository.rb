@@ -2,6 +2,8 @@ module PostRepository
   extend ActiveSupport::Concern
 
   included do
-    scope :created, -> { where :state => :created }
+    state_machine.states.each do |state|
+      scope state.name, -> { where :state => state.name }
+    end
   end
 end
