@@ -4,7 +4,7 @@ en:
       post:
         state:
           states:
-            created: "Created"
-            disabled: "Disabled"
+            unpublished: "Unpublished"
+            published: "Published"
           events:
-            close: "Close"
+            publish: "Publish"

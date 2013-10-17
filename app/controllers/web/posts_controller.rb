@@ -6,7 +6,7 @@ class Web::PostsController < Web::ApplicationController
   decorates_assigned :post
 
   def index
-    @posts = Post.created.page params[:page]
+    @posts = Post.published.page params[:page]
   end
 
   def new
