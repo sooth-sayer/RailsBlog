@@ -1,14 +1,16 @@
 %p
   %strong= "#{Post.human_attribute_name :title}:"
-  = @post.title
+  = post.title
+  |
+  = post.created_at
 
 %p
   %strong= "#{Post.human_attribute_name :text}:"
-  = @post.text
+  = post.text
 
 %p
   %strong= "#{Post.human_attribute_name :picture}:"
-  = image_tag @post.picture, class: "post-image"
+  = image_tag post.picture, class: "post-image"
 
 %h2= "#{Post::Comment.model_name.human count: 0}:"
 
@@ -18,7 +20,7 @@
 .collapse_in.collapse#demo
   = render "web/posts/comments/form"
 
-= nested_comments @post.comments.arrange(:order => :created_at)
+= nested_comments post.comments.arrange(:order => :created_at)
 
 = render partial: "web/shared/modal_form", locals: { title: t(".add_comment"), body: "web/posts/comments/form" }
 
@@ -27,6 +29,6 @@
     %span.icon-arrow-left
     = t(:back_btn)
   |
-  = link_to edit_post_path(@post), class: "btn btn-default" do
+  = link_to edit_post_path(post), class: "btn btn-default" do
     %span.icon-edit
     = t(:update_btn)
