@@ -22,5 +22,6 @@ module Blog
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
     config.assets.precompile += ["fonts/.woff", "fonts/.eot", "fonts/.svg", "fonts/.ttf"]
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    config.active_record.observers = :user_observer
   end
 end
