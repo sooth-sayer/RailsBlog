@@ -44,6 +44,7 @@ ru:
         text: "Text"
         picture: "Picture"
         state_event: "State"
+        user: "Author"
 
       post/comment:
         commenter: "Commenter"
