@@ -1,7 +1,4 @@
 class PostDecorator < Draper::Decorator
-  extend BlockquotesDecoratorHelper
-  blockquotes_decorated :text, class: "text-success"
-
   delegate_all
 
   def created_at
