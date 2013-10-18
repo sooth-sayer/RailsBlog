@@ -1,0 +1,4 @@
+ru:
+  user_mailer:
+    welcome_email:
+      subject: "Добро пожаловать на расчудесный бложек!"
