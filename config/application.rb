@@ -21,5 +21,6 @@ module Blog
     # config.i18n.default_locale = :de
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
     config.assets.precompile += ["fonts/.woff", "fonts/.eot", "fonts/.svg", "fonts/.ttf"]
+    config.active_record.observers = :user_observer
   end
 end
