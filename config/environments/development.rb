@@ -13,9 +13,6 @@ Blog::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -25,5 +22,17 @@ Blog::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true 
+  config.assets.debug = true
+
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'test-develop-d5425bc42617b419',
+    :password => 'f23912de4510c261',
+    :address => 'mailtrap.io',
+    :port => '2525',
+    :authentication => :plain,
+  }
+
 end
