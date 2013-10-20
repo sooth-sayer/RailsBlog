@@ -1,4 +1,7 @@
 %h1.text-success=t(".all_posts")
+
+= render partial: "filter", locals: { search: @q }
+
 %table.table
   %tr
     %th= Post.human_attribute_name :title

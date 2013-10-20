@@ -1,0 +1,8 @@
+ru:
+  ransack:
+    predicates:
+      cont: "содержит"
+      start: "начинается с"
+
+    search: "Применить"
+
