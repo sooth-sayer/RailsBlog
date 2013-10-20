@@ -1,0 +1,7 @@
+en:
+  ransack:
+    predicates:
+      cont: "contains"
+      start: "starts with"
+
+    search: "Apply"

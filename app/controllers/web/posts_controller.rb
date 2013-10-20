@@ -6,7 +6,9 @@ class Web::PostsController < Web::ApplicationController
   decorates_assigned :post
 
   def index
-    @posts = Post.published.page params[:page]
+    @q = Post.published.ransack(params[:q])
+    @posts = @q.result(distinct: true)
+    @posts = @posts.page params[:page]
   end
 
   def new

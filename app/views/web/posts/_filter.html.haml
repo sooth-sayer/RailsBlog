@@ -1,0 +1,9 @@
+.search-form
+  = search_form_for search do |f|
+    = f.label :title_cont
+    = f.text_field :title_cont
+    = f.label :text_start
+    = f.text_field :text_start
+
+    .form-group
+      = f.submit class: "btn btn-info btn-mini"
