@@ -11,7 +11,7 @@ class UserDecorator < Draper::Decorator
 
   private
     def warning_blockquotes(content)
-      helpers.content_tag :blockquote, class: "text-warning" do
+      h.content_tag :blockquote, class: "text-warning" do
         content
       end.html_safe
     end
