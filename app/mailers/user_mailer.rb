@@ -4,7 +4,6 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-    @url  = user_url @user
     mail to: @user.email
   end
 end
