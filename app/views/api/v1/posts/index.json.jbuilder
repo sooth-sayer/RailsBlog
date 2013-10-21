@@ -1,3 +1,1 @@
-json.posts do
-  json.array! @posts, :id, :title, :text, :state
-end
+json.posts @posts, :id, :title, :text, :state
