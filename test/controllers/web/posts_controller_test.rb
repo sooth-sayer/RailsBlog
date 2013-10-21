@@ -1,11 +1,11 @@
 require 'test_helper'
 
 class Web::PostsControllerTest < ActionController::TestCase
-  def setup
+  setup do
     @post = create(:post)
   end
 
-  def teardown
+  teardown do
     @post = nil
   end
 
