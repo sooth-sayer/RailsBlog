@@ -70,6 +70,8 @@ gem "rails-observers"
 
 gem "ransack"
 
+gem "airbrake"
+
 group :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
