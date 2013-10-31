@@ -7,7 +7,7 @@ Configus.build Rails.env do
     mailer do
       default_host "damp-sands-9749.herokuapp.com"
       default_from "noreply@damp-sands-9749.herokuapp.com"
-    end    
+    end
   end
 
   env :development, :parent => :production do

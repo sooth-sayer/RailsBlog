@@ -18,5 +18,3 @@ $ ->
 
   modal_submit.click ->
     form.submit()
-
-
