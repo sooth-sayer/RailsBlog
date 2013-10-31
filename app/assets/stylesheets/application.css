@@ -9,10 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree . 
+ *= require_tree .
  */
 .field_with_errors {
-  color: #ff0044;  
+  color: #ff0044;
   display: inline-block;
 }
 

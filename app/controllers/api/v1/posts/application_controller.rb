@@ -1,5 +1,5 @@
 class Api::V1::Posts::ApplicationController < Api::ApplicationController
-  helper_method :resource_post  
+  helper_method :resource_post
 
   private
     def resource_post
