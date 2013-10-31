@@ -102,6 +102,7 @@ GEM
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.0)
+    newrelic_rpm (3.6.8.168)
     pg (0.17.0)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
@@ -227,6 +228,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   kaminari
+  newrelic_rpm
   pg
   rails (= 4.0.0)
   rails-observers

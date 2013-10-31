@@ -5,4 +5,3 @@
 $ ->
   $(".add-a-comment").on("ajax:success", (e, data, status, xhr) ->
       window.location.reload())
-
