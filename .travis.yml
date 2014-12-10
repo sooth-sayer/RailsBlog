@@ -1,7 +1,5 @@
 language: ruby
 rvm:
   - "2.0.0"
-before_install:
-  - gem install debugger-ruby_core_source
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
