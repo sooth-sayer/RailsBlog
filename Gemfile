@@ -60,8 +60,6 @@ gem "bcrypt-ruby", "3.0.1"
 
 gem "term-ansicolor"
 
-gem "debugger"
-
 gem "wrong"
 
 gem "draper"
